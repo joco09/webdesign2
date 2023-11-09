@@ -1,0 +1,89 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: sans-serif;
+}
+body{
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to left, #EB2907, #EB5107, #EB7906, #EB9A07, #EB9A07);
+    background-size: 200% 200%;
+    animation: gradientAnimation 2s ease infinite reverse;
+}
+.hero-image{
+   width: 100%;
+   height: auto;
+   background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/backround.jpg);
+   background-repeat: repeat-y;
+   background-size:cover ;
+   background-position: center;
+}
+.top-nav{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 120px;
+    cursor: pointer;
+    border-radius: 25%;
+}
+.top-nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.top-nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.top-nav ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #eb5100;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.top-nav ul li:hover::after{
+    width: 100%;
+}
+.top-nav ul li:active{
+    transform: translateY(4px);
+}
+
+.personal-details{
+    background-color: white;
+    border-style: solid;
+    flex: 1;
+}
+.personal-calendar{
+    background-color: white;
+    border-style: solid;
+    flex: 1;
+  
+}
+.profile{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+@keyframes gradientAnimation{
+    0%, 100%
+    {
+        background-position: 10% 0%;
+    }
+    50%
+    {
+        background-position: 91% 100%;
+    }
+}
